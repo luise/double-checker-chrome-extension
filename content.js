@@ -37,7 +37,8 @@ var close_tab = function() {
 };
 
 var deletePopup = function() {
-    console.log("Delete popup.")
+    var popup = document.getElementById("waiterpopup");
+    document.body.removeChild(popup);
 };
 
 window.onload = addPopup;
