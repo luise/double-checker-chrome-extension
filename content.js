@@ -20,6 +20,11 @@ var addPopup = function() {
     messageContainer.className = 'messageContainer';
     content.appendChild(messageContainer);
 
+    var image = document.createElement('img');
+    var imgURL = chrome.runtime.getURL("images/breathing-clipart-mindful-breathing.gif");
+    image.src = imgURL;
+    messageContainer.appendChild(image);
+
     var title = document.createElement('div');
     title.className = 'titleText';
     title.innerHTML = 'Wait!';

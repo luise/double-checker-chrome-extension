@@ -14,5 +14,6 @@
           "js": ["content.js"]
       }
   ],
+  "web_accessible_resources": ["images/breathing-clipart-mindful-breathing.gif"],
   "manifest_version": 2
 }

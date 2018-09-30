@@ -29,6 +29,11 @@ body {
   font-family: Verdana !important;
 }
 
+.waiterPopup .contentContainer img {
+  width: 200px;
+  height: auto;
+}
+
 .waiterPopup .contentContainer .messageContainer .titleText {
   font-size: 3em;
   font-weight: bold;
