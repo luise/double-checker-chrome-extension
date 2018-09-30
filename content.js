@@ -1,7 +1,5 @@
 /*
 TODO:
-* Hide Facebook in the CSS, so you don't see it before the extension loads.
-    Find its root and change its visibility.
 * Let users change the list of pages to block.
 * Improve the style.
 */
@@ -30,6 +28,10 @@ var addPopup = function() {
         close_tab));
     popup.appendChild(makeButton("Yes", "okTabButton", deletePopup));
     document.body.appendChild(popup);
+
+    // The stylesheet hides the original page by default to avoid the page
+    // showing up before the popup is generated.
+    document.body.style.visibility = "visible";
 }
 
 var close_tab = function() {
