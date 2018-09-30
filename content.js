@@ -1,8 +1,3 @@
-/*
-TODO:
-* Let users change the list of pages to block.
-* Improve the style.
-*/
 var makeButton = function(title, className, action) {
     var button = document.createElement('button');
     button.className = className;
