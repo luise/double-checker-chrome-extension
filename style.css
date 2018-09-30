@@ -14,3 +14,26 @@ body {
     z-index: 350000000000;
     font-family: Verdana;
 }
+
+/* The table display allows us to easily vertically center the messageContainer. */
+.waiterPopup .contentContainer {
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+
+.waiterPopup .contentContainer .messageContainer {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-family: Verdana !important;
+}
+
+.waiterPopup .contentContainer .messageContainer .titleText {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.waiterPopup .contentContainer .messageContainer .subtitleText {
+  font-size: 1.5em;
+}

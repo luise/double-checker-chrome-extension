@@ -12,18 +12,33 @@ var addPopup = function() {
     popup.className = "waiterPopup";
     popup.id = "waiterpopup";
 
+    var content = document.createElement('div');
+    content.className = 'contentContainer';
+    popup.appendChild(content);
+
+    var messageContainer = document.createElement('div');
+    messageContainer.className = 'messageContainer';
+    content.appendChild(messageContainer);
+
     var title = document.createElement('div');
     title.className = 'titleText';
-    title.innerHTML = 'Wait! Are you sure you want to continue?';
-    popup.appendChild(title);
+    title.innerHTML = 'Wait!';
+    messageContainer.appendChild(title);
 
-    popup.appendChild(document.createElement('br'));
+    messageContainer.appendChild(document.createElement('br'));
 
-    popup.appendChild(makeButton("Nope", "closeTabButton",
+    var subtitle = document.createElement('div');
+    subtitle.className = 'subtitleText';
+    subtitle.innerHTML = 'Are you sure you want to continue?';
+    messageContainer.appendChild(subtitle);
+
+    messageContainer.appendChild(document.createElement('br'));
+
+    messageContainer.appendChild(makeButton("Nope", "closeTabButton",
         close_tab));
-    popup.appendChild(makeButton("Yes", "okTabButton", deletePopup));
-    document.body.appendChild(popup);
+    messageContainer.appendChild(makeButton("Yes", "okTabButton", deletePopup));
 
+    document.body.appendChild(popup);
     // The stylesheet hides the original page by default to avoid the page
     // showing up before the popup is generated.
     document.body.style.visibility = "visible";
