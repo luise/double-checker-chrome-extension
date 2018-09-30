@@ -1,0 +1,14 @@
+{
+  "name": "Wait",
+  "version": "0.1",
+  "description": "Delay loading of user selected websites.",
+  "content_scripts": [
+      {
+          "run_at": "document_start",
+          "matches": ["https://*.facebook.com/*"],
+          "css": ["style.css"],
+          "js": ["content.js"]
+      }
+  ],
+  "manifest_version": 2
+}
