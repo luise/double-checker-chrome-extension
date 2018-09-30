@@ -2,6 +2,10 @@
   "name": "Wait",
   "version": "0.1",
   "description": "Delay loading of user selected websites.",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
   "content_scripts": [
       {
           "run_at": "document_start",

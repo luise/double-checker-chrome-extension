@@ -2,8 +2,6 @@
 TODO:
 * Hide Facebook in the CSS, so you don't see it before the extension loads.
     Find its root and change its visibility.
-* Add a background script to we can call to delete the tab. Use an event
-    listener in the background and sendMessage in the content script.
 * Let users change the list of pages to block.
 * Improve the style.
 */
