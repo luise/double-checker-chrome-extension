@@ -8,6 +8,7 @@ var makeButton = function(title, className, action) {
 };
 
 var addPopup = function() {
+    document.body.style.visibility = "hidden";
     var popup = document.createElement('div');
     popup.className = "waiterPopup";
     popup.id = "waiterpopup";
@@ -44,8 +45,7 @@ var addPopup = function() {
     messageContainer.appendChild(makeButton("Yes", "okTabButton", deletePopup));
 
     document.body.appendChild(popup);
-    // The stylesheet hides the original page by default to avoid the page
-    // showing up before the popup is generated.
+
     document.body.style.visibility = "visible";
 }
 
@@ -58,4 +58,22 @@ var deletePopup = function() {
     document.body.removeChild(popup);
 };
 
-window.onload = addPopup;
+function start(callback) {
+  chrome.storage.sync.get('blacklist', function(items) {
+    callback(items.blacklist);
+  });
+}
+
+function startIfURLMatch(blacklistUrls) {
+  // Remove any occurances of http:// or https://.
+  var currUrl = document.URL.replace(/^https?:\/\//, "");
+  blacklistUrls.forEach((url) => {
+    if (currUrl.startsWith(url)) {
+      addPopup();
+    };
+  });
+}
+
+window.onload = () => {
+  start(startIfURLMatch);
+};

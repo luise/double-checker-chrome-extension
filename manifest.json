@@ -9,10 +9,17 @@
   "content_scripts": [
       {
           "run_at": "document_start",
-          "matches": ["https://*.facebook.com/*"],
+          "matches": ["<all_urls>"],
           "css": ["style.css"],
           "js": ["content.js"]
       }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "permissions": [
+    "storage"
   ],
   "web_accessible_resources": ["images/breathing-clipart-mindful-breathing.gif"],
   "manifest_version": 2
