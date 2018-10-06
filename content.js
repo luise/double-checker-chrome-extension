@@ -68,7 +68,7 @@ function startIfURLMatch(blacklistUrls) {
   // Remove any occurances of http:// or https://.
   var currUrl = document.URL.replace(/^https?:\/\//, "");
   blacklistUrls.forEach((url) => {
-    if (currUrl.startsWith(url)) {
+    if (currUrl.startsWith(url) && !(url == "")) {
       addPopup();
     };
   });
