@@ -1,4 +1,4 @@
-.waiterButton {
+.checkerButton {
   background-color: #568EC8;
   border: none;
   color: white;
@@ -16,7 +16,7 @@
   opacity: 0.3;
 }
 
-.waiterPopup {
+.checkerPopup {
     position: fixed;
     display: block;
     top: 0%;
@@ -30,29 +30,29 @@
 }
 
 /* The table display allows us to easily vertically center the messageContainer. */
-.waiterPopup .contentContainer {
+.checkerPopup .contentContainer {
   height: 100%;
   width: 100%;
   display: table;
 }
 
-.waiterPopup .contentContainer .messageContainer {
+.checkerPopup .contentContainer .messageContainer {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
   font-family: Verdana !important;
 }
 
-.waiterPopup .contentContainer img {
+.checkerPopup .contentContainer img {
   width: 200px;
   height: auto;
 }
 
-.waiterPopup .contentContainer .messageContainer .titleText {
+.checkerPopup .contentContainer .messageContainer .titleText {
   font-size: 30px !important;
   font-weight: bold !important;
 }
 
-.waiterPopup .contentContainer .messageContainer .subtitleText {
+.checkerPopup .contentContainer .messageContainer .subtitleText {
   font-size: 18px !important;
 }

@@ -1,6 +1,6 @@
 function makeButton(title, className, action) {
     var button = document.createElement("button");
-    button.className = "waiterButton " + className;
+    button.className = "checkerButton " + className;
     button.onclick = action;
     var text = document.createTextNode(title);
     button.appendChild(text);
@@ -10,8 +10,8 @@ function makeButton(title, className, action) {
 function addPopup() {
     document.body.style.visibility = "hidden";
     var popup = document.createElement("div");
-    popup.className = "waiterPopup";
-    popup.id = "waiterpopup";
+    popup.className = "checkerPopup";
+    popup.id = "checkerpopup";
 
     var content = document.createElement("div");
     content.className = "contentContainer";
@@ -54,7 +54,7 @@ function close_tab() {
 };
 
 function deletePopup() {
-    var popup = document.getElementById("waiterpopup");
+    var popup = document.getElementById("checkerpopup");
     document.body.removeChild(popup);
 };
 

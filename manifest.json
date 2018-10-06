@@ -1,7 +1,7 @@
 {
-  "name": "Wait",
+  "name": "Double Checker",
   "version": "0.1",
-  "description": "Delay loading of user selected websites.",
+  "description": "Double Checker gives you a chance to change your mind when you go visit those websites that you actually don't want to visit.",
   "background": {
     "scripts": ["background.js"],
     "persistent": false
