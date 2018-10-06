@@ -1,6 +1,6 @@
 function makeButton(title, className, action) {
     var button = document.createElement("button");
-    button.className = className;
+    button.className = "waiterButton " + className;
     button.onclick = action;
     var text = document.createTextNode(title);
     button.appendChild(text);

@@ -1,3 +1,21 @@
+.waiterButton {
+  background-color: #568EC8;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 4px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.okTabButton {
+  opacity: 0.3;
+}
+
 .waiterPopup {
     position: fixed;
     display: block;
@@ -8,7 +26,7 @@
     background-color: #f2fcff;
     opacity: 1;
     z-index: 350000000000;
-    font-family: Verdana;
+    font-family: Verdana !important;
 }
 
 /* The table display allows us to easily vertically center the messageContainer. */
@@ -31,10 +49,10 @@
 }
 
 .waiterPopup .contentContainer .messageContainer .titleText {
-  font-size: 3em;
-  font-weight: bold;
+  font-size: 30px !important;
+  font-weight: bold !important;
 }
 
 .waiterPopup .contentContainer .messageContainer .subtitleText {
-  font-size: 1.5em;
+  font-size: 18px !important;
 }
