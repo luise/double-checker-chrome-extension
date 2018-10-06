@@ -1,5 +1,5 @@
-var makeButton = function(title, className, action) {
-    var button = document.createElement('button');
+function makeButton(title, className, action) {
+    var button = document.createElement("button");
     button.className = className;
     button.onclick = action;
     var text = document.createTextNode(title);
@@ -7,38 +7,38 @@ var makeButton = function(title, className, action) {
     return button;
 };
 
-var addPopup = function() {
+function addPopup() {
     document.body.style.visibility = "hidden";
-    var popup = document.createElement('div');
+    var popup = document.createElement("div");
     popup.className = "waiterPopup";
     popup.id = "waiterpopup";
 
-    var content = document.createElement('div');
-    content.className = 'contentContainer';
+    var content = document.createElement("div");
+    content.className = "contentContainer";
     popup.appendChild(content);
 
-    var messageContainer = document.createElement('div');
-    messageContainer.className = 'messageContainer';
+    var messageContainer = document.createElement("div");
+    messageContainer.className = "messageContainer";
     content.appendChild(messageContainer);
 
-    var image = document.createElement('img');
+    var image = document.createElement("img");
     var imgURL = chrome.runtime.getURL("images/breathing-clipart-mindful-breathing.gif");
     image.src = imgURL;
     messageContainer.appendChild(image);
 
-    var title = document.createElement('div');
-    title.className = 'titleText';
-    title.innerHTML = 'Wait!';
+    var title = document.createElement("div");
+    title.className = "titleText";
+    title.innerHTML = "Wait!";
     messageContainer.appendChild(title);
 
-    messageContainer.appendChild(document.createElement('br'));
+    messageContainer.appendChild(document.createElement("br"));
 
-    var subtitle = document.createElement('div');
-    subtitle.className = 'subtitleText';
-    subtitle.innerHTML = 'Are you sure you want to continue?';
+    var subtitle = document.createElement("div");
+    subtitle.className = "subtitleText";
+    subtitle.innerHTML = "Are you sure you want to continue?";
     messageContainer.appendChild(subtitle);
 
-    messageContainer.appendChild(document.createElement('br'));
+    messageContainer.appendChild(document.createElement("br"));
 
     messageContainer.appendChild(makeButton("Nope", "closeTabButton",
         close_tab));
@@ -49,17 +49,17 @@ var addPopup = function() {
     document.body.style.visibility = "visible";
 }
 
-var close_tab = function() {
+function close_tab() {
     chrome.runtime.sendMessage({action: "close"});
 };
 
-var deletePopup = function() {
+function deletePopup() {
     var popup = document.getElementById("waiterpopup");
     document.body.removeChild(popup);
 };
 
 function start(callback) {
-  chrome.storage.sync.get('blacklist', function(items) {
+  chrome.storage.sync.get("blacklist", function(items) {
     callback(items.blacklist);
   });
 }
